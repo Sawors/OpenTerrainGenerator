@@ -423,7 +423,7 @@ public class ShadowChunkGenerator
 			blockInChunk = chunk.getBlockState(new BlockPos(blockX, y, blockZ));
 			if (blockInChunk != null)
 			{
-				blocksInColumn[y] = PaperMaterialData.ofBlockData(blockInChunk);
+				blocksInColumn[Math.max(y,0)] = PaperMaterialData.ofBlockData(blockInChunk);
 			} else {
 				break;
 			}
